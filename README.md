@@ -54,15 +54,18 @@ It may takes a long time, take a break and have a cup of coffee!
 It is OK if you want to install environment manually, remember to check CAREFULLY!
 
 ## Run
-You can run our code with a single GPU or multiple GPUs.
-- For single GPU users, please run the following script:
+You can run our code with multiple GPUs.
+- For our baseline, please run the following script: 
 ```
-python prcl_sig.py [--config]
+python ori_pseudo.py
 ```
-You need to change the file name after --config according to your actual experiments.
-- For multiple GPUs users, please run the following script: 
+- For the mix label strategy, please run the following script: 
 ```
-run ./script/batch_train.sh
+python mix_label.py
+```
+- For the cross label strategy, please run the following script: 
+```
+python cross_label.py
 ```
 The seed in our experiments is 3407. You can change the label rate and seed as you like, remember to change the corresponding config files and data_split directory.
 ## Hyper-parameters
